@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 15:11:52 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/04 15:40:11 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/08 11:06:48 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ScavTrap::ScavTrap()
 {
-	std::cout << "ScavTrap Constructor has been called" << std::endl;
+	std::cout << "ScavTrap default Constructor has been called" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
@@ -41,10 +41,13 @@ ScavTrap::ScavTrap(const ScavTrap& copy)
 ScavTrap&	ScavTrap::operator= (const ScavTrap& copy)
 {
 	std::cout << "ScavTrap Assignation operator called!" << std::endl;
-	this->Name = copy.Name;
-	this->Hitpoints = copy.Hitpoints;
-	this->Energy_points = copy.Energy_points;
-	this->Attack_damage = copy.Attack_damage;
+	if (this != &copy)
+	{
+		this->Name = copy.Name;
+		this->Hitpoints = copy.Hitpoints;
+		this->Energy_points = copy.Energy_points;
+		this->Attack_damage = copy.Attack_damage;
+	}
 	return (*this);
 }
 

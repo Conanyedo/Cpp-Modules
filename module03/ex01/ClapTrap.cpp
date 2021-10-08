@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:12:17 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/03 19:06:04 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/08 10:57:24 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "ClapTrap Constructor has been called" << std::endl;
+	std::cout << "ClapTrap default Constructor has been called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string& name) : Name(name), Hitpoints(10), Energy_points(10),
@@ -37,10 +37,13 @@ ClapTrap::ClapTrap(const ClapTrap& copy)
 ClapTrap&	ClapTrap::operator= (const ClapTrap& copy)
 {
 	std::cout << "ClapTrap Assignation operator called!" << std::endl;
-	this->Name = copy.Name;
-	this->Hitpoints = copy.Hitpoints;
-	this->Energy_points = copy.Energy_points;
-	this->Attack_damage = copy.Attack_damage;
+	if (this != &copy)
+	{
+		this->Name = copy.Name;
+		this->Hitpoints = copy.Hitpoints;
+		this->Energy_points = copy.Energy_points;
+		this->Attack_damage = copy.Attack_damage;
+	}
 	return (*this);
 }
 
@@ -56,5 +59,5 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "ClapTrap " << Name << " took " << amount << " amount of damage" << "" << std::endl;
+	std::cout << "ClapTrap " << Name << " got repaired with " << amount << " amount of energy" << std::endl;
 }
