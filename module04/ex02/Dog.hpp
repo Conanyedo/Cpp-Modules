@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:09:25 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/07 19:22:58 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:02:43 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class Dog : public Animal
 		Dog& operator = (const Dog& copy);
 		~Dog();
 		virtual void	makeSound() const;
+		void	set_ideas(std::string idea, int i);
+		void	print_ideas(int i);
 };
 
 

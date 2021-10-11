@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:09:25 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/07 19:22:58 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/11 11:52:27 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Dog : public Animal
 		Dog();
 		Dog(const Dog& copy);
 		Dog& operator = (const Dog& copy);
-		~Dog();
+		virtual	~Dog();
 		virtual void	makeSound() const;
 };
 

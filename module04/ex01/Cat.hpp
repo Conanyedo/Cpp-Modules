@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:09:29 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/08 16:32:34 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/11 11:52:18 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Cat : public Animal
 		Cat(std::string idea);
 		Cat(const Cat& copy);
 		Cat& operator = (const Cat& copy);
-		~Cat();
+		virtual	~Cat();
 		virtual void	makeSound() const;
 		void	set_ideas(std::string idea, int i);
 		void	print_ideas(int i);
