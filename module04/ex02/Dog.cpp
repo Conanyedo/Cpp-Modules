@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:09:27 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/11 12:03:05 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:26:46 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,18 @@ void	Dog::makeSound() const
 
 void	Dog::set_ideas(std::string idea, int i)
 {
-	brain->set_ideas(idea, i);
+	if (i > 99)
+		std::cout << "Wrong index!!" << std::endl;
+	else
+		brain->set_ideas(idea, i);
 }
 
 void	Dog::print_ideas(int i)
 {
-	std::cout << brain->get_ideas(i) << std::endl;
+	if (i > 99)
+		std::cout << "Wrong index!!" << std::endl;
+	else
+		std::cout << brain->get_ideas(i) << std::endl;
 }
 
 Dog::~Dog()

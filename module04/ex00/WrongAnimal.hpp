@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:02:40 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/07 18:05:59 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:19:10 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class WrongAnimal
 		WrongAnimal(const WrongAnimal& copy);
 		WrongAnimal& operator = (const WrongAnimal& copy);
 		WrongAnimal(const std::string& type);
-		~WrongAnimal();
+		virtual	~WrongAnimal();
 		void	makeSound() const;
 		const std::string	getType() const;
 };

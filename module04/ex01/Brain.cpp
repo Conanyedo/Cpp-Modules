@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:09:22 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/11 12:05:44 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:24:20 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ void	Brain::set_ideas(std::string idea, int i)
 
 const std::string&	Brain::get_ideas(int i) const
 {
-	if (i > 99)
-		return ("Wrong index!!");
 	return (ideas[i]);
 }
 

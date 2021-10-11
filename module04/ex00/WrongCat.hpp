@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:02:12 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/07 18:05:53 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:19:16 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class WrongCat : public WrongAnimal
 		WrongCat();
 		WrongCat(const WrongCat& copy);
 		WrongCat& operator = (const WrongCat& copy);
-		~WrongCat();
+		virtual	~WrongCat();
 		void	makeSound() const;
 };
 

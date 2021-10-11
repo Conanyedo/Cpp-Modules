@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:09:31 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/11 11:41:32 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:24:13 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,18 @@ void	Cat::makeSound() const
 
 void	Cat::set_ideas(std::string idea, int i)
 {
-	brain->set_ideas(idea, i);
+	if (i > 99)
+		std::cout << "Wrong index!!" << std::endl;
+	else
+		brain->set_ideas(idea, i);
 }
 
 void	Cat::print_ideas(int i)
 {
-	std::cout << brain->get_ideas(i) << std::endl;
+	if (i > 99)
+		std::cout << "Wrong index!!" << std::endl;
+	else
+		std::cout << brain->get_ideas(i) << std::endl;
 }
 
 Cat::~Cat()

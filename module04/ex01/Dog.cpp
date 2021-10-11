@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:09:27 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/11 11:42:38 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:24:30 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,22 @@ Dog& Dog::operator= (const Dog& copy)
 void	Dog::makeSound() const
 {
 	std::cout << "Woof" << std::endl;
+}
+
+void	Dog::set_ideas(std::string idea, int i)
+{
+	if (i > 99)
+		std::cout << "Wrong index!!" << std::endl;
+	else
+		brain->set_ideas(idea, i);
+}
+
+void	Dog::print_ideas(int i)
+{
+	if (i > 99)
+		std::cout << "Wrong index!!" << std::endl;
+	else
+		std::cout << brain->get_ideas(i) << std::endl;
 }
 
 Dog::~Dog()
