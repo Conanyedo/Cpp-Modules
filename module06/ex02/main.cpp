@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:39:28 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/01 12:23:56 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/04 18:08:42 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	identify(Base* p)
 	A *a;
 	B *b;
 	C *c;
-	
+
 	a = dynamic_cast<A*>(p);
 	b = dynamic_cast<B*>(p);
 	c = dynamic_cast<C*>(p);
@@ -49,6 +49,8 @@ void	identify(Base* p)
 		std::cout << "B\n";
 	else if (c)
 		std::cout << "C\n";
+	else
+		std::cout << "None of the derived Classes\n";
 }
 
 void	identify(Base& p)
@@ -77,6 +79,7 @@ void	identify(Base& p)
 		return ;
 	}
 	catch (const std::exception& e){}
+	std::cout << "None of the derived Classes\n";
 }
 
 int		main()
