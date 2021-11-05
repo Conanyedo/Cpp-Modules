@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:32:45 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/05 15:10:42 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/05 18:06:14 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,26 @@
 #include <string>
 
 template <typename T>
-void	swap(T& x , T& y);
+void	swap(T& x , T& y)
+{
+	T z;
+
+	z = x;
+	x = y;
+	y = z;
+}
 
 template <typename T>
-T	min(T min, T max);
+T	min(T min, T max)
+{
+	return (min < max) ? min : max;
+}
 
 template <typename T>
-T	max(T min, T max);
+T	max(T min, T max)
+{
+	return (min > max) ? min : max;
+}
 
 class Awesome
 {

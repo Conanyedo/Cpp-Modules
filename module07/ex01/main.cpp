@@ -6,27 +6,11 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:32:42 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/05 15:12:58 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/05 18:06:35 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
-
-template <typename T>
-void	print(const T& element)
-{
-	std::cout << element << " ";
-}
-
-template <typename T>
-void	iter(T *arr, int length, void (*func)(const T& element))
-{
-	int		i;
-
-	i = -1;
-	while (++i < length)
-		func(arr[i]);
-}
 
 int		main()
 {

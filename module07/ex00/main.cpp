@@ -6,33 +6,11 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:32:53 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/02 11:02:03 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/05 18:06:17 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
-
-template <typename T>
-void	swap(T& x , T& y)
-{
-	T z;
-
-	z = x;
-	x = y;
-	y = z;
-}
-
-template <typename T>
-T	min(T min, T max)
-{
-	return (min < max) ? min : max;
-}
-
-template <typename T>
-T	max(T min, T max)
-{
-	return (min > max) ? min : max;
-}
 
 int		main()
 {
