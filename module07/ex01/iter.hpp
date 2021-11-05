@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:32:34 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/02 11:22:38 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/05 15:11:18 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Awesome
 	private:
 		int	_n;
 	public:
-		Awesome(void) : _n(42) {return ;}
+		Awesome(void) : _n(42) {}
 		int		get(void) const {return this->_n;}
 };
 

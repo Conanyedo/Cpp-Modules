@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:01:25 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/02 09:54:59 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/05 15:21:15 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Array<T>&	Array<T>::operator=(const Array& copy)
 {
 	if (this != &copy)
 	{
-		unsigned int		i;
+		unsigned int	i;
 
 		i = -1;
 		this->n = copy.n;
@@ -81,9 +81,18 @@ const char* Array<T>::invalidIndex::what() const throw()
 int		main()
 {
 	Array<char>		str(6);
+	Array<int>		tab_int(6);
 	unsigned int	i;
 	int		random;
 
+	i = -1;
+	std::cout << "tab_int size: " << tab_int.size() << std::endl;
+	while (++i < tab_int.size())
+	{
+		tab_int[i] = i + 33;
+		std::cout << "tab_int[" << i << "] = " << tab_int[i] << std::endl;
+	}
+	std::cout << "----------------------\n";
 	i = -1;
 	std::cout << "str size: " << str.size() << std::endl;
 	while (++i < str.size())
@@ -105,6 +114,7 @@ int		main()
 	i = -1;
 	while (++i < str.size())
 		std::cout << "str[" << i << "] = " << str[i] << std::endl;
+	std::cout << "----------------------\n";
 	try
 	{
 		srand (time(NULL));
