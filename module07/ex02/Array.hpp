@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:01:23 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/05 18:31:32 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:10:39 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,21 @@ class	Array
 			public:
 				const char* what() const throw(){return ("Invalid index!!");}
 		};
-		Array<T>()
+		Array()
 		{
 			arr = NULL;
 			n = 0;
 		};
-		Array<T>(unsigned int n) : n(n)
+		Array(unsigned int n) : n(n)
 		{
-			unsigned int		i;
-
-			i = -1;
 			this->arr = new T[n]();
 		}
-		Array<T>(const Array& copy)
+		Array(const Array& copy)
 		{
 			this->arr = nullptr;
 			*this = copy;
 		}
-		Array<T>&	operator=(const Array& copy)
+		Array&	operator=(const Array& copy)
 		{
 			if (this != &copy)
 			{
