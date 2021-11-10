@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:34:24 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/08 13:31:09 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/10 16:27:39 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	easyfind(T temp, int find)
 	std::vector<int>::iterator		it;
 
 	it = std::find(temp.begin(), temp.end(), find);
+	std::cout << find;
 	if (it != temp.end())
 		std::cout << " value found on this container!!\n";
 	else
