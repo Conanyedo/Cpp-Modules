@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:34:00 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/08 11:15:15 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/10 14:57:37 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int		main()
 		vect.push_back(i);
 	try
 	{
-		std::cout << "-----------Try with vector as container----------------\n\n";
 		easyfind(vect, 0);
 		easyfind(vect, 4);
 		easyfind(vect, 1);
