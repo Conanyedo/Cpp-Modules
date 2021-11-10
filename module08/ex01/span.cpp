@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:41:36 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/08 20:11:06 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/10 14:48:18 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,7 @@ int		Span::shortestSpan()
 	if (this->_stored <= 1)
 		throw noSpan();
 	std::sort(vect.begin(), vect.end());
-	span = *(vect.begin()) - *(vect.begin() + 1);
-	span = (span < 0) ? -span : span;
+	span = *(vect.begin() + 1) - *(vect.begin());
 	return (span);
 }
 
@@ -61,7 +60,6 @@ int		Span::longestSpan()
 		throw noSpan();
 	std::sort(vect.begin(), vect.end());
 	span = *(vect.end() - 1) - *(vect.begin());
-	span = (span < 0) ? -span : span;
 	return (span);
 }
 
