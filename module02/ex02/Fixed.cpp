@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 11:12:17 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/01 12:53:23 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/12 11:48:09 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,14 +112,16 @@ Fixed Fixed::operator* (const Fixed& fixed)
 {
 	Fixed temp;
 	
-	temp._fixed = this->_fixed * fixed._fixed;
-	temp._fixed = temp.toInt();
+	temp._fixed = this->_fixed * (fixed._fixed >> bits);
 	return (temp);
 }
 
 Fixed Fixed::operator/ (const Fixed& fixed)
 {
-	return (Fixed(this->_fixed / fixed._fixed));
+	Fixed temp;
+
+	temp._fixed = (this->_fixed << bits) / fixed._fixed;
+	return (temp);
 }
 
 Fixed& Fixed::operator++()
