@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 15:05:15 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/10/10 18:11:41 by ybouddou         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:58:35 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,25 @@
 Character::Character() : Name(""), index(0)
 {
 	// std::cout << "Character default constructor has been called!!" << std::endl;
+	int i = -1;
+	while (++i < 4)
+		this->Inventory[i] = NULL;
 }
 
 Character::Character(const std::string& name) : Name(name), index(0)
 {
 	// std::cout << "Character constructor has been called!!" << std::endl;
+	int i = -1;
+	while (++i < 4)
+		this->Inventory[i] = NULL;
 }
 
 Character::Character(const Character& copy)
 {
 	// std::cout << "Character copy constructor has been called!!" << std::endl;
+	int i = -1;
+	while (++i < copy.index)
+		this->Inventory[i] = NULL;
 	*this = copy;
 }
 
@@ -37,7 +46,10 @@ Character&	Character::operator=(const Character& copy)
 		this->Name = copy.getName();
 		this->index = copy.index;
 		while (++i < index)
+		{
+			delete this->Inventory[i];
 			this->Inventory[i] = copy.Inventory[i]->clone();
+		}
 	}
 	return (*this);
 }
