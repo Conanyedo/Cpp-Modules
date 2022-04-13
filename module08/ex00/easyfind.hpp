@@ -6,7 +6,7 @@
 /*   By: ybouddou <ybouddou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:34:24 by ybouddou          #+#    #+#             */
-/*   Updated: 2021/11/10 16:27:39 by ybouddou         ###   ########.fr       */
+/*   Updated: 2022/04/13 01:36:38 by ybouddou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,13 @@ class notFound : public std::exception
 template <typename T>
 void	easyfind(T temp, int find)
 {
-	std::vector<int>::iterator		it;
+	typename T::iterator		it;
 
 	it = std::find(temp.begin(), temp.end(), find);
 	std::cout << find;
-	if (it != temp.end())
-		std::cout << " value found on this container!!\n";
-	else
+	if (it == temp.end())
 		throw notFound();
+	std::cout << " value found on this container!!\n";
 }
 
 #endif
